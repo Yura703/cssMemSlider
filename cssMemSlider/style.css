@@ -1,0 +1,23 @@
+.slider {
+    margin: 0 auto;
+    width: 1280px;
+    background-color: rgb(188, 221, 235);
+}
+.foto {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(217, 181, 181);
+}
+.footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+.text {
+    width: 75%;
+    text-align: start;
+}
+.controls {
+    width: 25%;
+    text-align: end;
+}
