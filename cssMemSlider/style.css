@@ -3,6 +3,12 @@
     height: 100vh;
 }
 
+input {
+    width: 0;
+    margin: 0;
+    padding: 0;
+}
+
 .wrapper {
     margin: 0 auto;
     width: 70rem;    
@@ -15,14 +21,13 @@
     width: 500%;
     height: 600px;
     background-color: rgb(217, 181, 181);
-    overflow: hidden;
     display: flex;
+    transition: all 1s ease;
 }
 
 .slide {
     width: 20%;
     height: 100%;  
-    transition: all .6 ease;  
 }
 
 .slide > img {
@@ -35,8 +40,6 @@ input[name="rb"] {
     transform: translateX(-9999%);
 }
 
-
-
 .footer {
     width: 100%;
     height: 100px;
@@ -44,8 +47,17 @@ input[name="rb"] {
 }
 .text {
     width: 75%;
-    text-align: start;
+    font-size: 50px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
+
+.text > span {
+    visibility: hidden;
+}
+
 .controls {
     width: 25%;
     display: flex;
@@ -79,22 +91,42 @@ input[name="rb"] {
     background-color: rgb(53, 49, 56);
 } 
 
-#rb1:checked ~ .slide1 {
+#rb1:checked ~ .sliders {
     margin-left: 0;
 }
 
-#rb1:checked ~ .slide2 {
-    margin-left: -20%;
+#rb1:checked ~ .footer > .text > .text1 {
+    visibility: visible;
 }
 
-#rb1:checked ~ .slide3 {
-    margin-left: -40%;
+#rb2:checked ~ .sliders {
+    transform: translateX(-20%);
 }
 
-#rb1:checked ~ .slide4 {
-    margin-left: -60%;
+#rb2:checked ~ .footer > .text > .text2 {
+    visibility: visible;
 }
 
-#rb1:checked ~ .slide5 {
-    margin-left: -80%;
+#rb3:checked ~ .sliders {
+    transform: translateX(-40%);
+}
+
+#rb3:checked ~ .footer > .text > .text3 {
+    visibility: visible;
+}
+
+#rb4:checked ~ .sliders {
+    transform: translateX(-60%);
+}
+
+#rb4:checked ~ .footer > .text > .text4 {
+    visibility: visible;
+}
+
+#rb5:checked ~ .sliders {
+    transform: translateX(-80%);
+}
+
+#rb5:checked ~ .footer > .text > .text5 {
+    visibility: visible;
 }
