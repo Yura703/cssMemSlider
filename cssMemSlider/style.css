@@ -1,6 +1,7 @@
-.main {
+body {
     background-color: rgb(183, 233, 238);
     height: 100vh;
+    margin: 0 auto;
 }
 
 input {
@@ -9,9 +10,19 @@ input {
     padding: 0;
 }
 
+.title {
+    width: 70rem;
+    font-size: 60px;
+    text-align: center;
+}
+
 .wrapper {
     margin: 0 auto;
     width: 70rem;    
+}
+
+.section {   
+    width: 100%; 
     border: 10px solid rgb(226, 92, 92);
     border-radius: 3%;
     overflow: hidden;
@@ -49,21 +60,42 @@ input[name="rb"] {
     width: 75%;
     font-size: 50px;
     margin-left: 10px;
-    display: flex;
-    justify-content: start;
+    display: grid;
+    grid-template-areas: 'grid1 grid2 grid3 grid4 grid5';
+    grid-gap: 10px;
     align-items: center;
+    visibility: hidden;
 }
 
 .text > span {
-    visibility: hidden;
+    text-align: center;
+}
+
+.text > .text1 {
+    grid-area: grid1;
+}
+
+.text > .text2 {
+    grid-area: grid2;
+}
+
+.text > .text3 {
+    grid-area: grid3;
+}
+
+.text > .text4 {
+    grid-area: grid4;
+}
+
+.text > .text5 {
+    grid-area: grid5;
 }
 
 .controls {
     width: 25%;
     display: flex;
     justify-content: end;
-    align-items: center;
-    
+    align-items: center;    
 }
 
 .navigation {
@@ -96,6 +128,7 @@ input[name="rb"] {
 }
 
 #rb1:checked ~ .footer > .text > .text1 {
+    grid-area: grid1;
     visibility: visible;
 }
 
@@ -104,6 +137,7 @@ input[name="rb"] {
 }
 
 #rb2:checked ~ .footer > .text > .text2 {
+    grid-area: grid1;
     visibility: visible;
 }
 
@@ -112,6 +146,7 @@ input[name="rb"] {
 }
 
 #rb3:checked ~ .footer > .text > .text3 {
+    grid-area: grid1;
     visibility: visible;
 }
 
@@ -120,6 +155,7 @@ input[name="rb"] {
 }
 
 #rb4:checked ~ .footer > .text > .text4 {
+    grid-area: grid1;
     visibility: visible;
 }
 
@@ -128,5 +164,19 @@ input[name="rb"] {
 }
 
 #rb5:checked ~ .footer > .text > .text5 {
+    grid-area: grid1;
     visibility: visible;
+}
+
+@media screen and (max-width:767px) {
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        height: 170px;
+    }
+
+    .text {
+        align-self:flex-start;
+        padding-bottom: 50px;
+    }
 }
