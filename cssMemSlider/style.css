@@ -62,39 +62,27 @@ input[name="rb"] {
     display: flex;
 }
 .text {
-    width: 75%;
-    font-size: 0.3rem;    
+    width: 500%;
+    height: 100%;
+    font-size: 3rem;    
     color: rgb(25, 24, 103);
     margin-left: 0.5%;
     display: grid;
-    grid-template-areas: 'grid1 grid2 grid3 grid4 grid5';
+    display: flex;
+    justify-content: start;
     align-items: center;
-    visibility: hidden;
+    transition: all 1s ease;
+    /* visibility: hidden; */
 }
 
-.text > .text1 {
-    grid-area: grid1;
-    width: 0;
+.text-wrapper {
+    overflow: hidden;
+    width: 100%;
+    /* width: 75%;     */
 }
 
-.text > .text2 {
-    grid-area: grid2;
-    width: 0;
-}
-
-.text > .text3 {
-    grid-area: grid3;
-    width: 0;
-}
-
-.text > .text4 {
-    grid-area: grid4;
-    width: 0;
-}
-
-.text > .text5 {
-    grid-area: grid5;
-    width: 0;
+.text > div {
+    width: 20%;
 }
 
 .controls {
@@ -107,8 +95,8 @@ input[name="rb"] {
 
 .navigation {
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 5rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,11 +125,8 @@ input[name="rb"] {
     transform: translateX(0%);
 }
 
-#rb1:checked ~ .footer > .text > .text1 {
-    grid-area: grid1;
-    visibility: visible;
-    width: 100%;
-    font-size: 3rem; 
+#rb1:checked ~ .footer > .text-wrapper > .text {
+    transform: translateX(0%);
 }
 
 #rb1:checked ~ .footer > .controls > .nav1 > .btn > .btn1 {
@@ -166,11 +151,8 @@ input[name="rb"] {
     background-color: rgb(0, 0, 0);
 }
 
-#rb2:checked ~ .footer > .text > .text2 {
-    grid-area: grid1;
-    visibility: visible;
-    width: 100%;
-    font-size: 3rem; 
+#rb2:checked ~ .footer > .text-wrapper > .text {
+    transform: translateX(-20%);
 }
 
 #rb3:checked ~ .sliders {
@@ -184,11 +166,8 @@ input[name="rb"] {
     background-color: rgb(0, 0, 0);
 }
 
-#rb3:checked ~ .footer > .text > .text3 {
-    grid-area: grid1;
-    visibility: visible;
-    width: 100%;
-    font-size: 3rem; 
+#rb3:checked ~ .footer > .text-wrapper > .text {
+    transform: translateX(-40%);
 }
 
 #rb4:checked ~ .sliders {
@@ -202,11 +181,8 @@ input[name="rb"] {
     background-color: rgb(0, 0, 0);
 }
 
-#rb4:checked ~ .footer > .text > .text4 {
-    grid-area: grid1;
-    visibility: visible;
-    width: 100%;
-    font-size: 3rem; 
+#rb4:checked ~ .footer > .text-wrapper > .text {
+    transform: translateX(-60%);
 }
 
 #rb5:checked ~ .sliders {
@@ -220,11 +196,8 @@ input[name="rb"] {
     background-color: rgb(0, 0, 0);
 }
 
-#rb5:checked ~ .footer > .text > .text5 {
-    grid-area: grid1;
-    visibility: visible;
-    width: 100%;
-    font-size: 3rem; 
+#rb5:checked ~ .footer > .text-wrapper > .text {
+    transform: translateX(-80%);
 }
 
 @media screen and (max-width:767px) {
@@ -246,10 +219,14 @@ input[name="rb"] {
         height: 17rem;
     }
 
+    .controls {
+       height: 1rem;
+    }
+
     .text {
-        align-self:flex-start;
-        height: 70%;
-        padding-bottom: 10%;
+        font-size: 2rem;
+        height: 13rem;
+      
     }        
 }
 
@@ -259,8 +236,8 @@ input[name="rb"] {
     }
 
     .navigation {
-        width: 30px;
-        height: 30px;
+        width: 3rem;
+        height: 3rem;
     }
 
     .title {
@@ -270,5 +247,9 @@ input[name="rb"] {
     .controls {
         width: 100%;          
         justify-content: center   
+    }
+
+    .text {
+        font-size: 2rem;
     }
 }
