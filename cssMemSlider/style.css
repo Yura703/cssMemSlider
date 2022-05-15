@@ -120,6 +120,9 @@ input[name="rb"] {
     height: 50%;
     border-radius: 100%;
     background-color: rgb(57, 54, 237);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navigation:hover > div {
@@ -141,12 +144,26 @@ input[name="rb"] {
     font-size: 3rem; 
 }
 
+#rb1:checked ~ .footer > .controls > .nav1 > .btn > .btn1 {
+    height: 70%;
+    width: 70%;
+    border-radius: 90%;
+    background-color: rgb(0, 0, 0);
+}
+
 #rb1:target ~ .footer > .controls > .nav1 > .btn {
     background-color: #fff;
 }
 
 #rb2:checked ~ .sliders {
     transform: translateX(-20%);
+}
+
+#rb2:checked ~ .footer > .controls > .nav2 > .btn > .btn2 {
+    height: 70%;
+    width: 70%;
+    border-radius: 90%;
+    background-color: rgb(0, 0, 0);
 }
 
 #rb2:checked ~ .footer > .text > .text2 {
@@ -160,6 +177,13 @@ input[name="rb"] {
     transform: translateX(-40%);
 }
 
+#rb3:checked ~ .footer > .controls > .nav3 > .btn > .btn3 {
+    height: 70%;
+    width: 70%;
+    border-radius: 90%;
+    background-color: rgb(0, 0, 0);
+}
+
 #rb3:checked ~ .footer > .text > .text3 {
     grid-area: grid1;
     visibility: visible;
@@ -171,6 +195,13 @@ input[name="rb"] {
     transform: translateX(-60%);
 }
 
+#rb4:checked ~ .footer > .controls > .nav4 > .btn > .btn4 {
+    height: 70%;
+    width: 70%;
+    border-radius: 90%;
+    background-color: rgb(0, 0, 0);
+}
+
 #rb4:checked ~ .footer > .text > .text4 {
     grid-area: grid1;
     visibility: visible;
@@ -180,6 +211,13 @@ input[name="rb"] {
 
 #rb5:checked ~ .sliders {
     transform: translateX(-80%);
+}
+
+#rb5:checked ~ .footer > .controls > .nav5 > .btn > .btn5 {
+    height: 70%;
+    width: 70%;
+    border-radius: 90%;
+    background-color: rgb(0, 0, 0);
 }
 
 #rb5:checked ~ .footer > .text > .text5 {
